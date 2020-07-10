@@ -1,0 +1,325 @@
+@import "utils/vars";
+
+.home{
+    margin: 0;
+    padding: 0;    
+    height: auto;
+    width: 100%;
+    max-width: 1152px;        
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    @media screen and (max-width: $tableWidth) {
+        height: auto; 
+    }      
+     
+    &__logo{
+        position: absolute;
+        top: 7%;
+        left: 13%;
+        width: 15%;
+        max-width: 123.24px;
+        height: auto;
+        object-fit: contain;
+        @media screen and (max-width: $tableWidth) {
+            top: 3%;
+            left: 5%;
+        }    
+    }
+
+    &__main{
+        margin-top: 3%;
+        width: 60%;
+        max-width: 577px;
+        height: auto;
+        position: relative;
+        @media screen and (max-width: $tableWidth) {
+            max-width: none;
+            width: 100%;
+        } 
+
+        &-head{               
+            width: 60%;
+            margin: 0 20%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        &-txt{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @media screen and (max-width: $tableWidth) {
+                display: none;   
+            }
+
+            &-mob{
+                display: none;
+                width: 100%;
+                height: auto;
+                margin-top: -29%;
+                @media screen and (max-width: $tableWidth) {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &__title{
+        width: 75%;
+        max-width: 845px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media screen and (max-width: $tableWidth) {
+            width: 90%;
+        } 
+
+        &-txt{
+            width: 90%;
+            @media screen and (max-width: $tableWidth) {
+                width: 100%;
+            } 
+        }
+
+        &-img{
+            width: 10%;
+            max-width: 28.75px;
+            height: auto;
+            object-fit: contain;
+            position: relative;
+            @media screen and (max-width: $tableWidth) {
+                display: none;
+            } 
+
+            &-line{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            &-mouse{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+                animation: 1s linear infinite alternate move_line;
+            }
+        }
+    }
+
+    &__wave{
+        width: 100vw;
+        max-width: none;
+        height: 9em;
+        background-image: url('/assets/img/home/backMain.png');
+        background-repeat: repeat-x;
+        background-size: contain;
+        @media screen and (max-width: $tableWidth) {
+           display: none;
+        }
+
+        &-mob{
+            display: none;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            margin-top: 5%;
+            @media screen and (max-width: $tableWidth) {
+                display: block;
+            }
+        }
+    }
+
+    &__blue{
+        background-color: #63E0DB;
+        position: relative;   
+        width: 100vw;     
+        margin-top: -1%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (max-width: $tableWidth) {
+            margin-top: -20%;
+        }
+        
+        &__line{
+            position: absolute;
+            top: -3em;
+            height: 3em;
+            width: 60%;
+            max-width: 620px;
+            border-radius: 1.5em;
+            background: #000000;
+            @media screen and (max-width: $tableWidth) {
+                top: -30%;
+                width: 90%;
+                max-width: none;
+            }
+
+            &-pony{
+                position: relative;
+                top: -100%;
+                height: auto;
+                width: 20%;
+                max-width: 111px;
+                object-fit: contain;
+                animation: 3s linear 0s infinite alternate move_pony;
+                @media screen and (max-width: $tableWidth) {
+                    max-width: none;
+                    top: -60%;
+                }
+            }
+        }
+
+        &__desc{
+            width: 75%;
+            max-width: 813px;
+            text-align: center;
+            color: #000000;
+            font-size: 0.8em;
+            line-height: 1.6em;
+            margin-top: 5em;
+            @media screen and (max-width: $tableWidth) {
+                width: 90%;
+                margin-top: 0;
+                text-align: left;
+            }
+
+            span{
+                color: #ffffff;
+                text-transform: uppercase;
+            }
+        }
+
+        &__link{
+            margin: 5% 0 10% 0;
+            width: 60%;
+            height: 4.4em;
+            max-width: 422px;
+            background: #ffffff;
+            color: #000000;    
+            border: 2px solid #000000;
+            border-radius: 0.3em;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            
+            @media screen and (max-width: $tableWidth) {
+                max-width: none;
+                width: 90%;
+                margin: 10% 0;
+                padding: 0 5%;
+            }
+
+
+            span{
+                position: absolute;
+                display: block;
+                opacity: 0;
+                transition: opacity 1s ease;
+            }   
+
+            &:hover{                
+                    
+                    span{
+                        opacity: 1;  
+                    }       
+
+                    span:nth-child(1){
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 0.3em;                                
+                        background:  #B577E0;
+                        animation: animate1 1s linear infinite;
+                    }
+
+                    span:nth-child(2){
+                        top: -100%;
+                        right: 0;
+                        width: 0.3em;
+                        height: 100%;
+                        background:  #B577E0;
+                        animation: animate2 1s linear infinite;
+                        animation-delay: 0.25s;
+                    }
+
+                    span:nth-child(3){
+                        bottom: 0;
+                        right: 0;
+                        width: 100%;
+                        height: 0.3em;
+                        background:  #B577E0;
+                        animation: animate3 1s linear infinite;
+                        animation-delay: 0.50s;
+                    }
+
+                    span:nth-child(4){
+                        bottom: -100%;
+                        left: 0;
+                        width: 0.3em;
+                        height: 100%;
+                        background:#B577E0;
+                        animation: animate4 1s linear infinite;
+                        animation-delay: 0.75s;
+                    }                
+            }
+
+            &-block{                  
+                @media screen and (max-width: $tableWidth) {
+                    font-size: 0.9em;
+                }          
+            }
+
+            &-img{
+                height: auto;
+                object-fit: contain;
+                @media screen and (max-width: $tableWidth) {
+                    width: 11%;
+                }
+            }
+
+            // &:hover{
+            //     background: #000000;
+            //     color: #ffffff;
+            //     text-decoration: none;
+            // }
+            // &:hover &-img{
+            //     filter: contrast(0);
+            // }
+        }
+    }
+}
+
+.skyBlueColor {
+    color: #63E0DB;
+}
+
+.lightRedColor {
+    color: #FF2940;
+}
+
+@keyframes move_pony {
+    from { margin-left: 0%;}
+    to {margin-left: 80%;}
+}
+
+@keyframes move_line { 
+    from { margin-bottom:-25%; } 
+    to { margin-bottom:25%; }  
+}

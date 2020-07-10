@@ -1,0 +1,209 @@
+.cum{
+    width: 90%;
+    height: 25em;
+    max-height: 456px;
+    max-width: 362.34px;
+    overflow: hidden;
+    border-radius: 1em;
+    z-index: 3;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.4), 0px 4px 40px rgba(99, 224, 219, 0.4);
+    @media screen and (max-width: $tableWidth) {
+        z-index: 6;     
+        margin-top: -35%; 
+        max-width: none;  
+        max-height: none;       
+    } 
+
+    &__block{
+        background: #000000;
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        &-video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            &-traf{
+                position: absolute;
+                top: 25%;
+                left: 25%;
+                width: 50%;
+                height: auto;
+                object-fit: contain;
+
+            }
+        }
+
+        &-canvas{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+
+        &-panel{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            &-img{
+                cursor: pointer;
+                .pic{
+
+                }
+
+                .capt{
+
+                }
+            }            
+        }
+
+        &-back{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            opacity: 0.7;
+        }
+
+        &-loader{
+            position: absolute;
+            top: 45%;
+            left: 15%;
+            height: 8%;
+            width: 70%;
+            border: 2px solid #63E0DB;
+            border-radius: 2em;
+
+            &-loading{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 2em;
+                overflow: hidden;
+                &-item{
+                    background: linear-gradient(270deg, #6889EF 2.18%, #63E0DB 51.19%, #AEEFEC 100.12%);
+                    height: 100%;
+                    width: 0%;
+                    transition: width 1s ease-in;
+                }
+            }
+
+            &-img{
+                position: relative;
+                width: 25%;
+                margin-top: -15%;
+                margin-left: 0%;
+                height: auto;
+                object-fit: contain;
+                transition: margin-left 1s ease-in;
+                animation: 1s linear infinite alternate pony_wait;
+            }
+        }
+
+        &-result{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            &-ok{
+                width: 100%;
+                height: 100%;                
+
+                &-face{
+                    width: 50%;
+                    margin: 31% 0 0 25%;
+                    height: auto;
+                    object-fit: contain;
+                    cursor: pointer;
+                }
+
+                &-item{
+                    position: absolute;
+                    top: 10%;
+                    right: 10%;
+                    width: 12%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+
+            &-error{
+                width: 100%;
+                height: 100%; 
+                cursor: pointer;              
+
+                &-img{
+                    width: 30%;
+                    height: auto;
+                    object-fit: contain;
+                    margin: 10% 35% 0;
+                }
+
+                &-txt{
+                    width: 90%;
+                    margin: 10% 5% 0;
+                    text-align: center;
+                    color: #ffffff;
+                }
+            }
+        }
+
+    }
+
+    &__capture{
+        position:fixed; 
+        left: -9999px;  
+        top: 0; 
+        width: auto;
+        height: auto;   
+        overflow: hidden;
+        
+          
+
+
+        &-img{
+            display: inline-block;
+            background: transparent;
+        }
+    }
+
+    &__file{
+        opacity: 0;
+        width: 1;
+        height: 1;
+    }
+
+}
+
+.anim{
+    &-video{
+        &-ok{
+            animation: 2s linear infinite alternate move_eye;
+        }
+        &-load{
+            // animation: 1s linear infinite face_load;
+        }
+        &-not{
+            animation: 4s linear infinite alternate move_eye;
+        }
+    }
+}
+
+@keyframes pony_wait {
+     from { transform: scale(1); }
+      to { transform: scale(1.1); }  
+}

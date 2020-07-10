@@ -1,0 +1,19 @@
+// Fonts here
+// see more: https://github.com/vedees/webpack-template/blob/master/README.md#import-js-files
+@font-face {
+    font-family: Minecraft-Bold;
+    src: url('/assets/fonts/minecraft/Minecraft-Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+         //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: Minecraft-Light;
+    src: url('/assets/fonts/minecraft/Minecraft-Light.ttf')  format('truetype'); /* Safari, Android, iOS */
+         //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: Minecraft-Regular;
+    src: url('/assets/fonts/minecraft/Minecraft-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+         //  url('/assets/fonts/HelveticaNeueCyr/Black/HelveticaNeueCyr-Black.svg') format('svg'); /* Legacy iOS */
+}
