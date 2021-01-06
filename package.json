@@ -78,7 +78,7 @@
     "@tensorflow-models/facemesh": "0.0.3",
     "@tensorflow/tfjs-converter": "^2.0.1",
     "@tensorflow/tfjs-core": "^1.7.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "html2canvas": "^1.0.0-rc.5",
     "regenerator-runtime": "^0.13.5",
     "vue": "^2.6.10",
